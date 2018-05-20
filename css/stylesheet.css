@@ -4,7 +4,7 @@ a:visited{ /* improve readability of visited links*/
 
 body{
 	background: #212121;
-	color: #ffff;
+	color: white;
 	text-align: center;
 }
 
@@ -31,7 +31,7 @@ githubRibbon{
 }
 
 #thresholdBox{
-	height: 2.5vh;
+	height: 5vh;
 	width: 20vw;
 }
 
