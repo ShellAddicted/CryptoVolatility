@@ -23,7 +23,7 @@ githubRibbon{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 70vh;
+	height: 45vh;
 }
 
 .price {
@@ -43,6 +43,25 @@ githubRibbon{
 	width: 100vw;
 }
 
+.currenciesArea{
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}
+
+.currenciesArea > label > input{ /* Hide inputs */
+	visibility: hidden; /* Makes input not-clickable */
+	position: absolute; /* Remove input from document flow */
+}
+
+.currenciesArea > label > input + img{
+	cursor: pointer;
+	height: 10vh;
+}
+
+.currenciesArea > label > input:checked + img{
+	border-bottom: 2px solid #fff;
+}
+
 @media only screen and (max-width: 768px) {
 	.githubRibbon{
 		display: none;
@@ -55,5 +74,8 @@ githubRibbon{
 	}
 	#thresholdBox{
 		width: 70vw;
+	}
+	.footer{
+		position: relative;
 	}
 }

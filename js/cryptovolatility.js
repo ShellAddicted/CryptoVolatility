@@ -24,22 +24,32 @@ function updatePrice(price){
 	}
 }
 
-function apiRequest(){
+function retrievePage(url, callback){
 	var req = new XMLHttpRequest();
 	req.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			try{
-				var data = JSON.parse(req.responseText);
-				updatePrice(data.price);
-			}
-			catch(err){
-				console.log(err);
-			}
-			
+			callback(req.responseText);
 		}
 	};
-	req.open("GET", "https://coincap.io/page/BTC", true);
+	req.open("GET", url, true);
 	req.send(null);
+}
+
+function coincapRequest(url){
+	retrievePage(url, function(response){
+		try{
+			var data = JSON.parse(response);
+			updatePrice(data.price);
+		}
+		catch(err){
+			console.log(err);
+		}
+	});
+}
+
+function apiRequest(){
+	cryptoCurrency = document.querySelector(".currenciesArea > label > input:checked").value;
+	coincapRequest("https://coincap.io/page/" + cryptoCurrency.toUpperCase());
 }
 
 apiRequest();
