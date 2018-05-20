@@ -7,6 +7,7 @@ function updatePrice(price){
 	}
 	price = parseFloat(price);
 	console.log(price);
+	console.log(userAlerted)
 	document.getElementById("currentPrice").innerHTML = parseFloat(price) + "$";
 
 	var userThreshold = document.getElementById("thresholdBox").value;
@@ -14,11 +15,11 @@ function updatePrice(price){
 		return;
 	}
 
-	if (parseFloat(price) > parseFloat(userThreshold) && !userAlerted){
+	if (!userAlerted && parseFloat(price) > parseFloat(userThreshold)){
 		audio.play();
 		userAlerted = true;
 	}
-	else{
+	else if (userAlerted && parseFloat(price) < parseFloat(userThreshold)){
 		userAlerted = false;
 	}
 }
