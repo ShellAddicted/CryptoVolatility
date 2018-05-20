@@ -37,7 +37,7 @@ function apiRequest(){
 			
 		}
 	};
-	req.open("GET", "http://coincap.io/page/BTC", true);
+	req.open("GET", "https://coincap.io/page/BTC", true);
 	req.send(null);
 }
 
