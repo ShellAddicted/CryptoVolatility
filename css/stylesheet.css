@@ -1,0 +1,59 @@
+a:visited{ /* improve readability of visited links*/
+	color: orange;
+}
+
+body{
+	background: #212121;
+	color: #ffff;
+	text-align: center;
+}
+
+githubRibbon{
+	display: inline;
+}
+
+.githubRibbon img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+
+.priceArea{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+}
+
+.price {
+	font-size: 10rem;
+}
+
+#thresholdBox{
+	height: 2.5vh;
+	width: 20vw;
+}
+
+.footer{
+	position: absolute;
+	margin-top: 5vh;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+}
+
+@media only screen and (max-width: 768px) {
+	.githubRibbon{
+		display: none;
+	}
+	.priceArea{
+		height: 60vh;
+	}
+	.price {
+		font-size: 16vw;
+	}
+	#thresholdBox{
+		width: 70vw;
+	}
+}
