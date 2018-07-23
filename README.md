@@ -1,7 +1,8 @@
 # Description
-This is a acoustic cryptocurrencies price alert web page inspired by HBO's TV Show Silicon Valley.  
-When the price of the selected cryptocurrency goes over a user defined threshold an acoustic alert message is played,  
-In this case: Napalm Death - You Suffer song.
+This is a price alert web page inspired by HBO's TV Show Silicon Valley.  
+When the price of the selected cryptocurrency goes over a user defined threshold an acoustic alert message is played.
+
+Song Played:  <b>Napalm Death - You Suffer song</b>
 
 ## DEMO
-available here: https://shelladdicted.github.io/CryptoVolatility/
+https://shelladdicted.github.io/CryptoVolatility/
